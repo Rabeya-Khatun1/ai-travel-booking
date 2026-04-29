@@ -7,7 +7,7 @@ import { ThemeToggle } from "./ThemeToggle";
 
 const ROUTES = [
   { name: "Home", path: "/" },
-  { name: "Explore", path: "/explore" },
+  // { name: "Explore", path: "/explore" },
   { name: "Dashboard", path: "/dashboard", isDropdown: true },
   { name: "Blog", path: "/blog" },
   { name: "About", path: "/about" },
@@ -81,8 +81,8 @@ export default function Navbar() {
 
         {/* Right Section: Actions & Profile */}
         <div className="hidden lg:flex items-center gap-4">
-          <ThemeToggle />
-          
+          {/* <ThemeToggle />
+           */}
           <div className="h-6 w-px bg-foreground/10 mx-2"></div>
           
           {/* Profile Menu */}
@@ -105,7 +105,7 @@ export default function Navbar() {
                 <Link href="/dashboard" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-foreground/5 rounded-lg transition-colors">
                   <User className="h-4 w-4" /> My Profile
                 </Link>
-                <Link href="/dashboard/settings" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-foreground/5 rounded-lg transition-colors">
+                <Link href="/dashboard/profile" className="flex items-center gap-2 px-4 py-2 text-sm hover:bg-foreground/5 rounded-lg transition-colors">
                   <Settings className="h-4 w-4" /> Settings
                 </Link>
                 <div className="h-px bg-foreground/10 my-1"></div>

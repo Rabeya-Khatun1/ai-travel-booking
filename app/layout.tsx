@@ -4,6 +4,7 @@ import "./globals.css";
 import { PublicNavbar, PublicFooter } from "@/components/LayoutControls";
 import { ThemeProvider } from "@/components/theme-provider";
 import { AuthProvider } from "@/components/AuthProvider";
+import SmoothScroll from "@/components/SmooothScroll";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,11 +23,13 @@ export default function RootLayout({
       <body className={`${inter.className} min-h-screen flex flex-col antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <AuthProvider>
-            <PublicNavbar />
+         <SmoothScroll>
+             <PublicNavbar />
             <main className="flex-1 flex flex-col">
               {children}
             </main>
             <PublicFooter />
+         </SmoothScroll>
           </AuthProvider>
         </ThemeProvider>
       </body>

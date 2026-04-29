@@ -31,7 +31,7 @@ export default function AdminDestinations() {
             type="text" 
             placeholder="Search catalog..." 
             value={search}
-            onChange={(e) => setSearchQuery(e.target.value)}
+            onChange={(e) => setSearch(e.target.value)}
             className="w-full pl-9 pr-4 py-2 bg-foreground/5 border border-foreground/10 rounded-xl focus:outline-none focus:border-primary text-sm"
           />
         </div>
